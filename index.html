@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GitHub Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <title>Khoyal's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -26,14 +26,13 @@
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Inter', sans-serif;
       background: var(--bg);
       color: var(--text);
       min-height: 100vh;
       overflow-x: hidden;
     }
 
-    /* NOISE OVERLAY */
     body::before {
       content: '';
       position: fixed;
@@ -44,7 +43,6 @@
       z-index: 0;
     }
 
-    /* GLOW BLOBS */
     .glow-blob {
       position: fixed;
       border-radius: 50%;
@@ -58,7 +56,6 @@
 
     main { position: relative; z-index: 1; }
 
-    /* NAV */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -92,7 +89,6 @@
     }
     .nav-links a:hover { color: var(--text); }
 
-    /* HERO */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -123,6 +119,7 @@
     }
 
     .hero h1 {
+      font-family: 'Playfair Display', serif;
       font-size: clamp(3rem, 8vw, 7rem);
       font-weight: 800;
       line-height: 1.0;
@@ -154,7 +151,7 @@
       gap: 0.5rem;
       padding: 0.75rem 1.75rem;
       border-radius: 100px;
-      font-family: 'Syne', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 0.875rem;
       font-weight: 600;
       letter-spacing: 0.04em;
@@ -177,7 +174,6 @@
     }
     .btn-ghost:hover { border-color: var(--text); transform: translateY(-1px); }
 
-    /* STATS ROW */
     .stats {
       display: flex;
       gap: 3rem;
@@ -200,7 +196,6 @@
       text-transform: uppercase;
     }
 
-    /* SECTIONS */
     section {
       max-width: 1100px;
       margin: 0 auto;
@@ -222,12 +217,12 @@
     }
 
     .section-title {
+      font-family: 'Playfair Display', serif;
       font-size: 2rem;
       font-weight: 800;
       letter-spacing: -0.02em;
     }
 
-    /* PROJECTS GRID */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -316,17 +311,6 @@
       letter-spacing: 0.05em;
     }
 
-    .project-stars {
-      display: flex;
-      align-items: center;
-      gap: 0.375rem;
-      font-family: 'DM Mono', monospace;
-      font-size: 0.75rem;
-      color: var(--muted);
-    }
-    .star-icon { color: #f0b429; font-size: 0.8rem; }
-
-    /* SKILLS */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -355,20 +339,12 @@
       overflow: hidden;
     }
 
-    .skill-bar-fill {
-      height: 100%;
-      border-radius: 4px;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
     .skill-pct {
       font-family: 'DM Mono', monospace;
       font-size: 0.75rem;
       color: var(--muted);
     }
 
-    /* CONTACT */
     .contact-row {
       display: flex;
       gap: 1rem;
@@ -417,7 +393,6 @@
       font-weight: 700;
     }
 
-    /* FOOTER */
     footer {
       border-top: 1px solid var(--border);
       padding: 2rem 3rem;
@@ -435,7 +410,6 @@
       color: var(--muted);
     }
 
-    /* CURSOR DOT */
     .cursor {
       width: 6px; height: 6px;
       background: var(--accent);
@@ -446,7 +420,6 @@
       transition: transform 0.1s;
     }
 
-    /* ANIMATIONS */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -476,7 +449,7 @@
   <div class="glow-blob blob2"></div>
 
   <nav>
-    <a href="#" class="nav-logo">YT.dev</a>
+    <a href="#" class="nav-logo">YN.dev</a>
     <ul class="nav-links">
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -487,185 +460,81 @@
 
   <main>
 
-    <!-- HERO -->
-    <div class="hero">
+    <div class="hero"style="flex-direction: row; align-items: center; gap: 4rem;">
+      <div style="flex: 1;">
       <p class="hero-eyebrow animate">Available for opportunities</p>
       <h1 class="animate delay-1">
         <span class="line-muted">Hello, I'm</span><br>
-        <span>Yousef Taha</span><br>
-        <span class="line-accent">Developer.</span>
+        <span>Khoyal Raumessur</span><br>
       </h1>
       <p class="hero-desc animate delay-2">
-        I build thoughtful, performant software — from robust backends to polished interfaces. Passionate about open source and clean architecture.
+       I am Khoyal from Mauritius, I am currently living in Hamburg and pursuing a bachelor in Information Engineering at Haw Hamburg. I am eager to enhance my coding skills and indulge in more projects
       </p>
       <div class="hero-cta animate delay-3">
         <a href="#projects" class="btn btn-primary">View My Work</a>
         <a href="#contact" class="btn btn-ghost">Get In Touch</a>
       </div>
+        </div>
+  <div style="flex-shrink: 0;">
+    <img src="digphoto.jpeg" alt="Khoyal Raumessur" style="width: 280px; height: 280px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent);">
+  </div>
+</div>
 
-      <div class="stats animate delay-4">
-        <div class="stat-item">
-          <span class="stat-num" id="stat-repos">32</span>
-          <span class="stat-label">Repositories</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">1.2k</span>
-          <span class="stat-label">Stars Earned</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">5</span>
-          <span class="stat-label">Years Coding</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">18</span>
-          <span class="stat-label">Contributions this week</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- PROJECTS -->
     <section id="projects">
       <div class="section-header">
-        <span class="section-num">01 /</span>
-        <h2 class="section-title">Featured Projects</h2>
+        <h2 class="section-title">Projects</h2>
       </div>
       <div class="projects-grid" id="projects-grid">
 
-        <a href="#" class="project-card">
-          <div class="project-icon">🚀</div>
-          <h3>Orbit CLI</h3>
-          <p>A blazing-fast command-line tool for managing deployment pipelines with minimal configuration.</p>
-          <div class="project-meta">
-            <div class="project-tags">
-              <span class="tag">Rust</span>
-              <span class="tag">CLI</span>
-            </div>
-            <div class="project-stars"><span class="star-icon">★</span> 342</div>
-          </div>
-        </a>
-
-        <a href="#" class="project-card">
-          <div class="project-icon">🧠</div>
-          <h3>NeuralKit</h3>
-          <p>Lightweight Python library for building and training neural networks with a Numpy-only backend.</p>
-          <div class="project-meta">
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">ML</span>
-            </div>
-            <div class="project-stars"><span class="star-icon">★</span> 218</div>
-          </div>
-        </a>
-
-        <a href="#" class="project-card">
-          <div class="project-icon">⚡</div>
-          <h3>Flashbase</h3>
-          <p>In-memory key-value store with persistence and pub/sub support — a Redis-inspired weekend project.</p>
-          <div class="project-meta">
-            <div class="project-tags">
-              <span class="tag">Go</span>
-              <span class="tag">Databases</span>
-            </div>
-            <div class="project-stars"><span class="star-icon">★</span> 189</div>
-          </div>
-        </a>
-
-        <a href="#" class="project-card">
-          <div class="project-icon">🎨</div>
-          <h3>Patchwork UI</h3>
-          <p>Accessible component library for React with a focus on customizability and zero runtime dependencies.</p>
-          <div class="project-meta">
-            <div class="project-tags">
-              <span class="tag">TypeScript</span>
-              <span class="tag">React</span>
-            </div>
-            <div class="project-stars"><span class="star-icon">★</span> 294</div>
-          </div>
-        </a>
-
-        <a href="#" class="project-card">
-          <div class="project-icon">🔍</div>
-          <h3>Logtail</h3>
-          <p>Real-time log aggregation and search tool that can handle millions of events per second.</p>
-          <div class="project-meta">
-            <div class="project-tags">
-              <span class="tag">Go</span>
-              <span class="tag">DevOps</span>
-            </div>
-            <div class="project-stars"><span class="star-icon">★</span> 156</div>
-          </div>
-        </a>
-
-        <a href="#" class="project-card">
-          <div class="project-icon">🌐</div>
-          <h3>Localize.js</h3>
-          <p>Tiny i18n library (2kb) with support for plurals, interpolation, and lazy loading of translations.</p>
-          <div class="project-meta">
-            <div class="project-tags">
-              <span class="tag">JavaScript</span>
-              <span class="tag">i18n</span>
-            </div>
-            <div class="project-stars"><span class="star-icon">★</span> 103</div>
-          </div>
-        </a>
-
-      </div>
+ <a href="https://app-dashboard-90qt.onrender.com" target="_blank" class="project-card">
+  <div class="project-icon">📊</div>
+  <h3>AppPulse</h3>
+  <p>A dashboard to monitor how mobile apps are performing. Shows installs, active users, revenue and ratings — all live from a real PostgreSQL database.</p>
+  <div class="project-meta">
+    <div class="project-tags">
+      <span class="tag">Python</span>
+      <span class="tag">Flask</span>
+      <span class="tag">PostgreSQL</span>
+    </div>
+ <a href="https://github.com/khoya1/app_dashboard" target="_blank" 
+       onclick="event.stopPropagation()" 
+       style="font-size:0.75rem; color: var(--accent); text-decoration:none; font-weight:600;">
+      GitHub ↗
+    </a>
+  </div>
+</a>
+           </div>
     </section>
 
-    <!-- SKILLS -->
     <section id="skills">
       <div class="section-header">
-        <span class="section-num">02 /</span>
         <h2 class="section-title">Skills & Tools</h2>
       </div>
       <div class="skills-grid">
-        <div class="skill-card">
-          <div class="skill-name">TypeScript</div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="92" style="width:0"></div></div>
-          <div class="skill-pct">92%</div>
-        </div>
-        <div class="skill-card">
+
+      <div class="skill-card">
           <div class="skill-name">Python</div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="88" style="width:0"></div></div>
-          <div class="skill-pct">88%</div>
         </div>
         <div class="skill-card">
-          <div class="skill-name">Go</div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="75" style="width:0"></div></div>
-          <div class="skill-pct">75%</div>
+          <div class="skill-name">C</div>
         </div>
         <div class="skill-card">
-          <div class="skill-name">Rust</div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="60" style="width:0"></div></div>
-          <div class="skill-pct">60%</div>
+          <div class="skill-name">PostgreSql</div>
         </div>
         <div class="skill-card">
-          <div class="skill-name">React</div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="90" style="width:0"></div></div>
-          <div class="skill-pct">90%</div>
+          <div class="skill-name">Visual Basic</div>
         </div>
         <div class="skill-card">
-          <div class="skill-name">PostgreSQL</div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="82" style="width:0"></div></div>
-          <div class="skill-pct">82%</div>
+          <div class="skill-name">HTML</div>
         </div>
         <div class="skill-card">
-          <div class="skill-name">Docker / K8s</div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="78" style="width:0"></div></div>
-          <div class="skill-pct">78%</div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-name">Machine Learning</div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="70" style="width:0"></div></div>
-          <div class="skill-pct">70%</div>
+          <div class="skill-name">Java</div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact">
       <div class="section-header">
-        <span class="section-num">03 /</span>
         <h2 class="section-title">Get In Touch</h2>
       </div>
       <div class="contact-row">
@@ -675,14 +544,14 @@
           </div>
           <div>
             <div class="contact-label">GitHub</div>
-            <div class="contact-value">@yourusername</div>
+            <div class="contact-value">@khoya1</div>
           </div>
         </a>
-        <a href="mailto:hello@example.com" class="contact-card">
+        <a href="khoyalraumessur24@gmail.com" class="contact-card">
           <div class="contact-icon">✉️</div>
           <div>
             <div class="contact-label">Email</div>
-            <div class="contact-value">hello@example.com</div>
+            <div class="contact-value">khoyalraumessur24@gmail.com</div>
           </div>
         </a>
         <a href="https://linkedin.com" class="contact-card" target="_blank">
@@ -691,48 +560,17 @@
           </div>
           <div>
             <div class="contact-label">LinkedIn</div>
-            <div class="contact-value">Yousef Taha</div>
+            <div class="contact-value">Khoyal Raumessur</div>
           </div>
         </a>
       </div>
     </section>
 
     <footer>
-      <p>© 2026 Yousef Taha — Built with ♥ and lots of coffee</p>
+      <p>© 2026 Khoyal Raumessur — Built with ♥ and lots of coffee</p>
       <p>Open source on GitHub</p>
     </footer>
 
   </main>
 
-  <script>
-    // Animate skill bars on scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
-            bar.style.width = bar.dataset.pct + '%';
-          });
-        }
-      });
-    }, { threshold: 0.2 });
-
-    document.querySelectorAll('#skills').forEach(el => observer.observe(el));
-
-    // Smooth number count-up for stats
-    document.querySelectorAll('.stat-num').forEach(el => {
-      const target = parseInt(el.textContent);
-      if (isNaN(target)) return;
-      let start = 0;
-      const duration = 1500;
-      const step = timestamp => {
-        if (!start) start = timestamp;
-        const progress = Math.min((timestamp - start) / duration, 1);
-        el.textContent = Math.floor(progress * target);
-        if (progress < 1) requestAnimationFrame(step);
-        else el.textContent = target;
-      };
-      setTimeout(() => requestAnimationFrame(step), 400);
-    });
-  </script>
-</body>
-</html>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
